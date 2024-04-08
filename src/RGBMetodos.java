@@ -1,7 +1,7 @@
 import java.awt.Color;
 import java.awt.image.BufferedImage;
 
-public class RGBMetodos {
+public class RGBMetodos{
 
     // Obtém todos os pixels da imagem 
     public static void getAllPixel(BufferedImage image) {

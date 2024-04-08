@@ -8,7 +8,7 @@ import javax.swing.JFrame;
 import javax.swing.JLabel;
 import javax.swing.WindowConstants;
 
-public class ImagemManipula {
+public class ImageManipula {
 	
 	// Carrega uma imagem a partir de um arquivo
 	public static BufferedImage loadImage()
@@ -24,11 +24,11 @@ public class ImagemManipula {
 	}
 	
 	// Salva uma ou mais imagens em arquivos
-	public static void saveImage(BufferedImage... image)
+	public static void saveImage(BufferedImage... images)
 	{		
 		try {
 			int i = 0;
-			for (BufferedImage img : image)
+			for (BufferedImage img : images)
 			{
 				i++;
 				File saveFile = new File("ProcessamentoIMGs\\Imagens\\Nerd - copia " + i + ".jpg");
@@ -43,13 +43,13 @@ public class ImagemManipula {
 	}
 	
 	// Exibe uma ou mais imagens em uma janela Swing
-	public static void displayImage(BufferedImage... image)
+	public static void displayImage(BufferedImage... images)
 	{
 		JFrame window = new JFrame();
 		window.setTitle("Image");
 		window.getContentPane().setLayout(new FlowLayout());
 				
-		for (BufferedImage img : image)
+		for (BufferedImage img : images)
 		{
 			window.getContentPane().add(new JLabel(new ImageIcon(img)));
 		}
